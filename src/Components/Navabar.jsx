@@ -11,7 +11,7 @@ export default function Navbar() {
           <Link>About</Link>
         </div>
         <div className="login flex gap-3 items-center">
-            <img src={User} alt="" srcset="" />
+            <img src={User} alt="" />
             <button className="bg-gray-900 px-6 py-2 text-white">Login</button>
         </div>
       </div>

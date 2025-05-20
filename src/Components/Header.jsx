@@ -5,7 +5,7 @@ export default function Header() {
     <>
       <div className="flex flex-col justify-center items-center gap-2 py-2">
         <div className="logo">
-          <img className="w-[300px]" src={Logo} alt="" srcset="" />
+          <img className="w-[300px]" src={Logo} alt="" />
         </div>
         <h1 className="text-gray-400">Jurnalism Without Fear and Favour</h1>
         <h1>{moment().format("dddd, MMMM Do YYYY")}</h1>
