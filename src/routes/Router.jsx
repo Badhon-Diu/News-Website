@@ -1,8 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import Login from "../Components/Login";
 import Showdata from "../Components/Showdata";
+import SignUp from "../Components/SignUp";
 import AuthLayout from "../Layout/AuthLayout";
 import HomeLayout from "../Layout/HomeLayout";
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             `https://openapi.programming-hero.com/api/news/category/${params.id}`
           ),
       },
+      {
+        path:"",
+        element:<Navigate to ={`category/01`}></Navigate>
+      }
     ],
   },
   {
@@ -29,11 +34,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: "login",
-        element: <h1>Login Here</h1>,
+        element: <Login></Login>,
       },
       {
         path: "signup",
-        element: <h1>SignUp Here</h1>,
+        element: <SignUp></SignUp>,
       },
     ],
   },

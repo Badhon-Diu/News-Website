@@ -1,5 +1,6 @@
 // NewsCard.jsx
 import { Eye, Star } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function NewsCard({ singleNews }) {
   return (
@@ -32,7 +33,10 @@ export default function NewsCard({ singleNews }) {
           />
         </div>
 
-        <p className="text-sm text-gray-600 mt-4">{singleNews.details}</p>
+        <p className="text-sm text-gray-600 mt-4">
+          {singleNews.details.slice(0, 150)}...{" "}
+          <Link className="text-blue-600 font-semibold">Read More</Link>
+        </p>
 
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center space-x-1 text-orange-500">
